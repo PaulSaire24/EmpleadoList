@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input"  [(ngModel)] = "radioButonSeleccioando"
+                    type="radio" name="sexo" id="todos" value="Todos" (change)="radioEmit()"><!--cada ue cambia se ejecuta el metodo radioEmit()-->
+            <label class="form-check-label"  for="todos">Todos({{todos}})</label><!--ojo aqui los name deben ser iguales para que si selecciona uno los otros no esten seleccionado-->
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioButonSeleccioando"
+                    type="radio" name="sexo" id="femenino" value="Femenino" (change)="radioEmit()">
+            <label class="form-check-label" for="femenino">Femenino({{femenino}})</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioButonSeleccioando"
+                    type="radio" name="sexo" id="masculino" value="Masculino" (change)="radioEmit()">
+            <label class="form-check-label" for="masculino">Masculino({{masculino}})</label>
+        </div>
+    </div>
+</div>

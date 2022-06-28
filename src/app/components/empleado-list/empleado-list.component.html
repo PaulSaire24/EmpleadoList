@@ -1,0 +1,33 @@
+<div class="container mt-3">
+  <app-count-empleados [todos] = "obtenerTotal()" 
+                      [femenino] ="obtenerTotalFemenino()"
+                      [masculino] ="obtenerTotalMasculino()"
+                      (sdfs)="gsdgs($event)"></app-count-empleados>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>legajo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th>Salario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor = "let empleadex of listEmpleados">
+                    <tr *ngIf = "radioButonSeleccioando =='Todos' || radioButonSeleccioando == empleadex.sexo">
+                      <td>{{empleadex.legajo}}</td>
+                      <td>{{empleadex.nombre}}</td>
+                      <td>{{empleadex.apellido}}</td>
+                      <td>{{empleadex.sexo}}</td>
+                      <td>{{empleadex.salario | currency}}</td> <!--el currency es para poner el simnbolo de dolar nada mas-->
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
+//COMPONENTES
 import { AppComponent } from './app.component';
+import { EmpleadoListComponent } from './components/empleado-list/empleado-list.component';
+import { CountEmpleadosComponent } from './components/empleado-list/count-empleados/count-empleados.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmpleadoListComponent,
+    CountEmpleadosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule //IMPORTAR PARA PDODR UTLIZAR EL [(ngModel)]
   ],
   providers: [],
   bootstrap: [AppComponent]
